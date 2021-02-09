@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+exit 0
+
 # Fail if any command fails or if there are unbound variables and check syntax
 set -euxo pipefail
 bash -n "$0"
