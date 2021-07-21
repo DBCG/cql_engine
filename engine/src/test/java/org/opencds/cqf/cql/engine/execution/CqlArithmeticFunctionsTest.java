@@ -503,10 +503,10 @@ public class CqlArithmeticFunctionsTest extends CqlExecutionTestBase {
         assertThat(result, is(0));
 
         result = context.resolveExpressionRef("PredecessorOf1D").getExpression().evaluate(context);
-        assertThat((BigDecimal)result, comparesEqualTo((new BigDecimal("0.99999999"))));
+        assertThat((BigDecimal)result, comparesEqualTo((new BigDecimal("0.9"))));
 
         result = context.resolveExpressionRef("PredecessorOf101D").getExpression().evaluate(context);
-        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.00999999")));
+        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.00")));
 
 //        result = context.resolveExpressionRef("PredecessorOf1QCM").getExpression().evaluate(context);
 //        Assert.assertTrue(new BigDecimal("0.99999999").compareTo(((Quantity) result).getValue()) == 0);
@@ -686,10 +686,10 @@ public class CqlArithmeticFunctionsTest extends CqlExecutionTestBase {
         assertThat(result, is(2));
 
         result = context.resolveExpressionRef("SuccessorOf1D").getExpression().evaluate(context);
-        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.00000001")));
+        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.1")));
 
         result = context.resolveExpressionRef("SuccessorOf101D").getExpression().evaluate(context);
-        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.01000001")));
+        assertThat((BigDecimal)result, comparesEqualTo(new BigDecimal("1.02")));
 
         result = context.resolveExpressionRef("SuccessorOfJan12000").getExpression().evaluate(context);
         Assert.assertTrue(EquivalentEvaluator.equivalent(result, new DateTime(null, 2000, 1, 2)));
